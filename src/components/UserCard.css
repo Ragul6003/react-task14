@@ -1,0 +1,88 @@
+.users-container {
+    min-height: 100vh;
+    background: #f5f6fa;
+    padding: 40px 6%;
+}
+
+.page-header {
+    margin-bottom: 35px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    color: #20243a;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: #777;
+}
+
+.page-header span {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 15px;
+    background: #e8eaff;
+    color: #4f46e5;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.status-message {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #f5f6fa;
+}
+
+.status-message p {
+    color: #777;
+}
+
+.error {
+    color: #dc2626;
+}
+
+.loader {
+    width: 45px;
+    height: 45px;
+    border: 5px solid #ddd;
+    border-top-color: #4f46e5;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 900px) {
+    .users-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .users-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .users-container {
+        padding: 25px 5%;
+    }
+
+    .page-header h1 {
+        font-size: 25px;
+    }
+}
